@@ -1,0 +1,1700 @@
+{
+  "intents": [
+    {
+      "intent": "AgendarConsulta",
+      "examples": [
+        {
+          "text": "Gostaria de agendar uma consulta"
+        },
+        {
+          "text": "Gostaria de marcar"
+        },
+        {
+          "text": "Preciso de uma consulta"
+        },
+        {
+          "text": "Preciso de um horário com o médico"
+        },
+        {
+          "text": "Quero marcar uma consulta médica"
+        }
+      ],
+      "description": "Para solicitações de agendamento de consultas"
+    },
+    {
+      "intent": "CancelarConsulta",
+      "examples": [
+        {
+          "text": "cancelar"
+        },
+        {
+          "text": "Devido a problemas, quero cancelar a consulta médica"
+        },
+        {
+          "text": "Não irei conseguir comparecer a consulta"
+        },
+        {
+          "text": "Quero cancelar a consulta"
+        }
+      ],
+      "description": "Para solicitações de cancelamento de consultas."
+    },
+    {
+      "intent": "PerguntarSobreEspecialidade",
+      "examples": [
+        {
+          "text": "Descrição de cada especialidade"
+        },
+        {
+          "text": "Pode me dizer mais sobre a área de pediatria?"
+        },
+        {
+          "text": "Quais especialidades médicas disponíveis ?"
+        },
+        {
+          "text": "Quais especialidades médicas vocês oferecem?"
+        }
+      ],
+      "description": "Quando os usuários têm dúvidas sobre as especialidades disponíveis."
+    },
+    {
+      "intent": "ReagendarConsulta",
+      "examples": [
+        {
+          "text": "Gostaria de alterar a data da minha consulta"
+        },
+        {
+          "text": "Quero reagendar minha Consulta"
+        },
+        {
+          "text": "Quero remarcar minha consulta"
+        }
+      ],
+      "description": "Para solicitações de remarcação de consultas."
+    },
+    {
+      "intent": "VerificarDisponibilidade",
+      "examples": [
+        {
+          "text": "Estou interessado em uma consulta, mas preciso saber quando há disponibilidade."
+        },
+        {
+          "text": "Quais datas têm horários disponíveis para agendamento"
+        },
+        {
+          "text": "Verificar Disponibilidade"
+        }
+      ],
+      "description": "Quando os usuários desejam verificar a disponibilidade de consultas."
+    }
+  ],
+  "entities": [
+    {
+      "entity": "DataConsulta",
+      "values": [
+        {
+          "type": "synonyms",
+          "value": "15 de dezembro",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "20 de fevereiro",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "27 de outubro",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "3 de novembro",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "5 de janeiro",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "Amanhã",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "Mês que vem",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "Quarta-feira",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "Quinta-Feira",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "Segunda-feira",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "Semana que vem",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "Sexta-Feira",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "Terça-Feira",
+          "synonyms": []
+        }
+      ],
+      "fuzzy_match": true
+    },
+    {
+      "entity": "Disponibilidade",
+      "values": [
+        {
+          "type": "synonyms",
+          "value": "Quarta-feira, 11 de novembro, às 15:30 da tarde",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "Sexta-feira, 13 de novembro, às 9:00 da manhã",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "Terça-feira, 10 de novembro, às 10:00 da manhã",
+          "synonyms": []
+        }
+      ],
+      "fuzzy_match": true
+    },
+    {
+      "entity": "Email",
+      "values": [
+        {
+          "type": "synonyms",
+          "value": "ana@seuemail.com",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "carlos@gmail.com",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "joao@example.com",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "lucia@hotmail.com",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "maria@email.com",
+          "synonyms": []
+        }
+      ],
+      "fuzzy_match": true
+    },
+    {
+      "entity": "Especialidade",
+      "values": [
+        {
+          "type": "synonyms",
+          "value": "Ginecologista",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "Neurologista",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "Otorrinolaringologista",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "Pediatra",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "Reumatologista",
+          "synonyms": []
+        }
+      ],
+      "fuzzy_match": true
+    },
+    {
+      "entity": "HorarioConsulta",
+      "values": [
+        {
+          "type": "synonyms",
+          "value": "às 10h da manhã",
+          "synonyms": [
+            "10 h ",
+            "10 horas "
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "ás 14:00",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "às 15h30",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "às 18:00",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "às 9h da manhã",
+          "synonyms": []
+        }
+      ],
+      "fuzzy_match": true
+    },
+    {
+      "entity": "MotivoConsulta",
+      "values": [
+        {
+          "type": "synonyms",
+          "value": "Artrite reumatoide",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "Consulta de rotina anual",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "Dor de cabeça crônica",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "Enxaqueca",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "Gravidez e acompanhamento pré-natal",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "Osteoartrite",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "Problemas de audição",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "Sinusite crônica",
+          "synonyms": []
+        }
+      ],
+      "fuzzy_match": true
+    },
+    {
+      "entity": "NomeMedico",
+      "values": [
+        {
+          "type": "synonyms",
+          "value": "Dra. Ana",
+          "synonyms": [
+            "Ana"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "Dra. Sofia",
+          "synonyms": [
+            "Sofia"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "Dr. Carlos",
+          "synonyms": [
+            "Carlos"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "Dr. Luís",
+          "synonyms": [
+            "Luís"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "Dr. Ricardo",
+          "synonyms": [
+            "Ricardo"
+          ]
+        }
+      ],
+      "fuzzy_match": true
+    },
+    {
+      "entity": "NomePaciente",
+      "values": [
+        {
+          "type": "synonyms",
+          "value": "Ana Pereira",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "Carlos Rodrigues",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "João Souza",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "Lúcia Alves",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "Maria da Silva",
+          "synonyms": []
+        }
+      ],
+      "fuzzy_match": true
+    },
+    {
+      "entity": "semanas",
+      "values": [
+        {
+          "type": "synonyms",
+          "value": "Gostaria de agendar pra amanhã",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "Gostaria de agendar Quarta-feira",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "Gostaria de agendar Quinta-feira",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "Gostaria de agendar Segunda-feira",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "Gostaria de agendar Sexta-feira",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "Gostaria de agendar Terça-feira",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "Semana que vem",
+          "synonyms": []
+        }
+      ],
+      "fuzzy_match": true
+    },
+    {
+      "entity": "sys-date",
+      "values": []
+    },
+    {
+      "entity": "sys-number",
+      "values": []
+    },
+    {
+      "entity": "sys-time",
+      "values": []
+    },
+    {
+      "entity": "Telefone",
+      "values": [
+        {
+          "type": "synonyms",
+          "value": "(123) 456-7890",
+          "synonyms": [
+            "1234567890"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "123-456-7890",
+          "synonyms": [
+            "1234567890"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "555-123-4567",
+          "synonyms": [
+            "5551234567"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "800-555-5555",
+          "synonyms": [
+            "8005555555"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "987-654-3210",
+          "synonyms": [
+            "9876543210"
+          ]
+        }
+      ],
+      "fuzzy_match": true
+    }
+  ],
+  "metadata": {
+    "api_version": {
+      "major_version": "v2",
+      "minor_version": "2018-11-08"
+    }
+  },
+  "dialog_nodes": [
+    {
+      "type": "standard",
+      "title": "Bem-vindo",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Olá. Sou BotSeuParaAgendamento como posso te ajudar ?"
+              },
+              {
+                "text": "Olá, Como posso te ajudar ?"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "random"
+          }
+        ]
+      },
+      "conditions": "welcome",
+      "dialog_node": "Bem-vindo"
+    },
+    {
+      "type": "frame",
+      "title": "Agendar Consulta ",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Perfeito, obrigado. Sua consulta com o $NomeMedico $Especialidade está agendada para $DataConsulta, às $HorarioConsulta . Enviaremos um lembrete por SMS no número $Telefone . Se você tiver alguma outra pergunta ou solicitação, sinta-se à vontade para perguntar."
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "conditions": "#AgendarConsulta",
+      "dialog_node": "Em outros casos",
+      "previous_sibling": "Bem-vindo",
+      "disambiguation_opt_out": true
+    },
+    {
+      "type": "event_handler",
+      "output": {},
+      "parent": "slot_4_1699038425729",
+      "context": {
+        "HorarioConsulta": "@HorarioConsulta"
+      },
+      "conditions": "@HorarioConsulta",
+      "event_name": "input",
+      "dialog_node": "handler_10_1699038425731"
+    },
+    {
+      "type": "event_handler",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Com certeza, estou aqui para ajudar com o reagendamento da sua consulta. Por favor, informe o seu nome e o nome do médico com quem a consulta estava agendada."
+              }
+            ],
+            "response_type": "text"
+          }
+        ]
+      },
+      "parent": "slot_2_1699050461958",
+      "event_name": "focus",
+      "dialog_node": "handler_10_1699050461959",
+      "previous_sibling": "handler_7_1699050461959"
+    },
+    {
+      "type": "event_handler",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Olá! Na nossa clínica, oferecemos diversas especialidades médicas. Alguns exemplos incluem:  Ginecologia Neurologia Otorrinolaringologia Pediatria Reumatologia Essas são apenas algumas das especialidades disponíveis. Se você tiver interesse em uma especialidade específica ou tiver alguma pergunta sobre alguma delas, sinta-se à vontade para perguntar."
+              }
+            ],
+            "response_type": "text"
+          }
+        ]
+      },
+      "parent": "slot_5_1699051240362",
+      "event_name": "focus",
+      "dialog_node": "handler_10_1699051240371",
+      "previous_sibling": "handler_9_1699051240371"
+    },
+    {
+      "type": "event_handler",
+      "output": {},
+      "parent": "slot_2_1699035261242",
+      "context": {
+        "Especialidade": "@Especialidade"
+      },
+      "conditions": "@Especialidade",
+      "event_name": "input",
+      "dialog_node": "handler_1_1699035261242"
+    },
+    {
+      "type": "event_handler",
+      "output": {},
+      "parent": "slot_6_1699038373944",
+      "context": {
+        "DataConsulta": "@DataConsulta"
+      },
+      "conditions": "@DataConsulta",
+      "event_name": "input",
+      "dialog_node": "handler_1_1699038373944"
+    },
+    {
+      "type": "event_handler",
+      "output": {},
+      "parent": "slot_6_1699050653061",
+      "context": {
+        "HorarioConsulta": "@HorarioConsulta"
+      },
+      "conditions": "@HorarioConsulta",
+      "event_name": "input",
+      "dialog_node": "handler_1_1699050653062"
+    },
+    {
+      "type": "event_handler",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "A ginecologia é uma especialidade médica focada na saúde das mulheres, com ênfase no sistema reprodutivo feminino. Os ginecologistas são especializados no diagnóstico e tratamento de condições ginecológicas, além de fornecerem cuidados preventivos e orientações sobre saúde da mulher."
+              }
+            ],
+            "response_type": "text"
+          }
+        ]
+      },
+      "parent": "slot_9_1699051706696",
+      "event_name": "focus",
+      "dialog_node": "handler_1_1699051706697",
+      "previous_sibling": "handler_2_1699051706697"
+    },
+    {
+      "type": "event_handler",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "A neurologia é a especialidade médica que trata das doenças do sistema nervoso, incluindo o cérebro, a medula espinhal e os nervos periféricos. Os neurologistas cuidam de pacientes com condições neurológicas como enxaquecas, epilepsia, doença de Alzheimer e outros distúrbios cerebrais e neurológicos."
+              }
+            ],
+            "response_type": "text"
+          }
+        ]
+      },
+      "parent": "slot_5_1699051749539",
+      "event_name": "focus",
+      "dialog_node": "handler_1_1699051749540",
+      "previous_sibling": "handler_5_1699051749540"
+    },
+    {
+      "type": "event_handler",
+      "output": {},
+      "parent": "slot_10_1699052923249",
+      "context": {
+        "HorarioConsulta": "@HorarioConsulta"
+      },
+      "conditions": "@HorarioConsulta",
+      "event_name": "input",
+      "dialog_node": "handler_1_1699052923249"
+    },
+    {
+      "type": "event_handler",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Qual Horário ?"
+              }
+            ],
+            "response_type": "text"
+          }
+        ]
+      },
+      "parent": "slot_4_1699035382099",
+      "event_name": "focus",
+      "dialog_node": "handler_2_1699035382099",
+      "previous_sibling": "handler_8_1699035382099"
+    },
+    {
+      "type": "event_handler",
+      "output": {},
+      "parent": "slot_9_1699051706696",
+      "context": {
+        "Especialidade_Ginecologista": "@Especialidade:Ginecologista"
+      },
+      "conditions": "@Especialidade:Ginecologista",
+      "event_name": "input",
+      "dialog_node": "handler_2_1699051706697"
+    },
+    {
+      "type": "event_handler",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Qual o horário que estava ? "
+              }
+            ],
+            "response_type": "text"
+          }
+        ]
+      },
+      "parent": "slot_4_1699038425729",
+      "event_name": "focus",
+      "dialog_node": "handler_3_1699038425731",
+      "previous_sibling": "handler_10_1699038425731"
+    },
+    {
+      "type": "event_handler",
+      "output": {},
+      "parent": "slot_3_1699038504416",
+      "context": {
+        "Telefone": "@Telefone"
+      },
+      "conditions": "@Telefone",
+      "event_name": "input",
+      "dialog_node": "handler_3_1699038504417"
+    },
+    {
+      "type": "event_handler",
+      "output": {},
+      "parent": "slot_9_1699051848047",
+      "context": {
+        "Especialidade_2": "@Especialidade"
+      },
+      "conditions": "@Especialidade",
+      "event_name": "input",
+      "dialog_node": "handler_3_1699051848048"
+    },
+    {
+      "type": "event_handler",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Qual a especialidade para consulta ?"
+              }
+            ],
+            "response_type": "text"
+          }
+        ]
+      },
+      "parent": "slot_2_1699035261242",
+      "event_name": "focus",
+      "dialog_node": "handler_4_1699035261243",
+      "previous_sibling": "handler_1_1699035261242"
+    },
+    {
+      "type": "event_handler",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Qual o horário ? "
+              }
+            ],
+            "response_type": "text"
+          }
+        ]
+      },
+      "parent": "slot_6_1699050653061",
+      "event_name": "focus",
+      "dialog_node": "handler_4_1699050653062",
+      "previous_sibling": "handler_1_1699050653062"
+    },
+    {
+      "type": "event_handler",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "A otorrinolaringologia, frequentemente abreviada como otorrino, é a especialidade médica que trata de doenças e distúrbios relacionados aos ouvidos, nariz e garganta. Os otorrinolaringologistas lidam com problemas auditivos, distúrbios do equilíbrio, distúrbios do sono, infecções do ouvido, sinusite, entre outros."
+              }
+            ],
+            "response_type": "text"
+          }
+        ]
+      },
+      "parent": "slot_6_1699051772563",
+      "event_name": "focus",
+      "dialog_node": "handler_4_1699051772564",
+      "previous_sibling": "handler_9_1699051772564"
+    },
+    {
+      "type": "event_handler",
+      "output": {},
+      "parent": "slot_2_1699052252458",
+      "context": {
+        "DataConsulta": "@DataConsulta"
+      },
+      "conditions": "@DataConsulta",
+      "event_name": "input",
+      "dialog_node": "handler_4_1699052252460"
+    },
+    {
+      "type": "event_handler",
+      "output": {},
+      "parent": "slot_5_1699038116911",
+      "context": {
+        "MotivoConsulta": "@MotivoConsulta"
+      },
+      "conditions": "@MotivoConsulta",
+      "event_name": "input",
+      "dialog_node": "handler_5_1699038116911"
+    },
+    {
+      "type": "event_handler",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Qual nome do  Médico ?"
+              }
+            ],
+            "response_type": "text"
+          }
+        ]
+      },
+      "parent": "slot_2_1699038311043",
+      "event_name": "focus",
+      "dialog_node": "handler_5_1699038311043",
+      "previous_sibling": "handler_6_1699038311043"
+    },
+    {
+      "type": "event_handler",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Confirmado, sua consulta com o $NomeMedico, às $HorarioConsulta, será cancelada. Para finalizar o processo de cancelamento, precisamos confirmar o seu número de telefone para que possamos entrar em contato com você, se necessário."
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "slot_3_1699038504416",
+      "event_name": "focus",
+      "dialog_node": "handler_5_1699038504417",
+      "previous_sibling": "handler_3_1699038504417"
+    },
+    {
+      "type": "event_handler",
+      "output": {},
+      "parent": "slot_5_1699051749539",
+      "context": {
+        "Especialidade_Neurologista": "@Especialidade:Neurologista"
+      },
+      "conditions": "@Especialidade:Neurologista",
+      "event_name": "input",
+      "dialog_node": "handler_5_1699051749540"
+    },
+    {
+      "type": "event_handler",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "A pediatria é a especialidade médica dedicada ao cuidado da saúde de crianças, desde o nascimento até a adolescência. Os pediatras são treinados para diagnosticar, tratar e prevenir uma ampla variedade de condições médicas que afetam crianças, além de fornecer orientações sobre o desenvolvimento infantil e vacinações."
+              }
+            ],
+            "response_type": "text"
+          }
+        ]
+      },
+      "parent": "slot_3_1699051806573",
+      "event_name": "focus",
+      "dialog_node": "handler_5_1699051806574",
+      "previous_sibling": "handler_7_1699051806574"
+    },
+    {
+      "type": "event_handler",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Ótimo, sua consulta com o $Especialidade, foi agendada com sucesso. Por favor, confirme seu endereço de e-mail para que possamos enviar um lembrete."
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "slot_1_1699053161326",
+      "event_name": "focus",
+      "dialog_node": "handler_5_1699053161327",
+      "previous_sibling": "handler_9_1699053161327"
+    },
+    {
+      "type": "event_handler",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Obrigado, $NomePaciente. Seu e-mail é: $Email. Seu agendamento foi confirmado, e você receberá um lembrete no seu e-mail antes da consulta. Se você tiver mais alguma pergunta ou precisar de assistência adicional, fique à vontade para perguntar."
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "slot_10_1699054158412",
+      "event_name": "focus",
+      "dialog_node": "handler_5_1699054158413",
+      "previous_sibling": "handler_8_1699054158413"
+    },
+    {
+      "type": "event_handler",
+      "output": {},
+      "parent": "slot_3_1699037291053",
+      "context": {
+        "NomeMedico": "@NomeMedico"
+      },
+      "conditions": "@NomeMedico",
+      "event_name": "input",
+      "dialog_node": "handler_6_1699037291054"
+    },
+    {
+      "type": "event_handler",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Qual o motivo da Consulta ?"
+              }
+            ],
+            "response_type": "text"
+          }
+        ]
+      },
+      "parent": "slot_5_1699038116911",
+      "event_name": "focus",
+      "dialog_node": "handler_6_1699038116911",
+      "previous_sibling": "handler_5_1699038116911"
+    },
+    {
+      "type": "event_handler",
+      "output": {},
+      "parent": "slot_2_1699038311043",
+      "context": {
+        "NomeMedico": "@NomeMedico"
+      },
+      "conditions": "@NomeMedico",
+      "event_name": "input",
+      "dialog_node": "handler_6_1699038311043"
+    },
+    {
+      "type": "event_handler",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Obrigado, $NomePaciente. Só mais uma informação necessária: a data e a hora da consulta que você deseja cancelar."
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "slot_6_1699038373944",
+      "event_name": "focus",
+      "dialog_node": "handler_6_1699038373944",
+      "previous_sibling": "handler_1_1699038373944"
+    },
+    {
+      "type": "event_handler",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": " Obrigado, $NomePaciente. Agora, precisamos da data e do horário preferidos para o novo agendamento."
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "slot_6_1699050614607",
+      "event_name": "focus",
+      "dialog_node": "handler_6_1699050614608",
+      "previous_sibling": "handler_8_1699050614608"
+    },
+    {
+      "type": "event_handler",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "A reumatologia é a especialidade médica que se concentra no diagnóstico e tratamento de doenças reumáticas, que envolvem articulações, músculos e tecidos conjuntivos. Os reumatologistas cuidam de condições como artrite, lúpus, fibromialgia e outras doenças autoimunes e inflamatórias."
+              }
+            ],
+            "response_type": "text"
+          }
+        ]
+      },
+      "parent": "slot_9_1699051848047",
+      "event_name": "focus",
+      "dialog_node": "handler_6_1699051848048",
+      "previous_sibling": "handler_3_1699051848048"
+    },
+    {
+      "type": "event_handler",
+      "output": {},
+      "parent": "slot_2_1699052868601",
+      "context": {
+        "NomePaciente": "@NomePaciente"
+      },
+      "conditions": "@NomePaciente",
+      "event_name": "input",
+      "dialog_node": "handler_6_1699052868602"
+    },
+    {
+      "type": "event_handler",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Claro, ficarei feliz em ajudar com isso. Para agendar a consulta, por favor, forneça a data e a hora de sua preferência."
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "slot_3_1699035316805",
+      "event_name": "focus",
+      "dialog_node": "handler_7_1699035316805",
+      "previous_sibling": "handler_9_1699035316805"
+    },
+    {
+      "type": "event_handler",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": " Ótimo! Por favor, confirme seu nome para a reserva."
+              }
+            ],
+            "response_type": "text"
+          }
+        ]
+      },
+      "parent": "slot_7_1699035852274",
+      "event_name": "focus",
+      "dialog_node": "handler_7_1699035852274",
+      "previous_sibling": "handler_8_1699035852274"
+    },
+    {
+      "type": "event_handler",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Esses são os médicos disponíveis Dra. Ana Santos, Dr. Luís Mendes, Dra. Sofia Rodrigues, Dr. Ricardo Silva, Dr. Carlos Fernandes. Com qual gostaria de passar ?"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "slot_3_1699037291053",
+      "event_name": "focus",
+      "dialog_node": "handler_7_1699037291054",
+      "previous_sibling": "handler_6_1699037291054"
+    },
+    {
+      "type": "event_handler",
+      "output": {},
+      "parent": "slot_2_1699050461958",
+      "context": {
+        "NomePaciente": "@NomePaciente"
+      },
+      "conditions": "@NomePaciente",
+      "event_name": "input",
+      "dialog_node": "handler_7_1699050461959"
+    },
+    {
+      "type": "event_handler",
+      "output": {},
+      "parent": "slot_4_1699050516731",
+      "context": {
+        "NomeMedico": "@NomeMedico"
+      },
+      "conditions": "@NomeMedico",
+      "event_name": "input",
+      "dialog_node": "handler_7_1699050516732"
+    },
+    {
+      "type": "event_handler",
+      "output": {},
+      "parent": "slot_3_1699051806573",
+      "context": {
+        "Especialidade_Pediatra": "@Especialidade:Pediatra"
+      },
+      "conditions": "@Especialidade:Pediatra",
+      "event_name": "input",
+      "dialog_node": "handler_7_1699051806574"
+    },
+    {
+      "type": "event_handler",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Claro, ficarei feliz em ajudar com isso. Primeiro, por favor, informe-me a especialidade médica desejada."
+              }
+            ],
+            "response_type": "text"
+          }
+        ]
+      },
+      "parent": "slot_8_1699052102157",
+      "event_name": "focus",
+      "dialog_node": "handler_7_1699052102167",
+      "previous_sibling": "handler_8_1699052102167"
+    },
+    {
+      "type": "event_handler",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Excelente, agora, qual é a sua preferência de data para a consulta?"
+              }
+            ],
+            "response_type": "text"
+          }
+        ]
+      },
+      "parent": "slot_2_1699052252458",
+      "event_name": "focus",
+      "dialog_node": "handler_7_1699052252460",
+      "previous_sibling": "handler_4_1699052252460"
+    },
+    {
+      "type": "event_handler",
+      "output": {},
+      "parent": "slot_4_1699035382099",
+      "context": {
+        "HorarioConsulta": "@HorarioConsulta"
+      },
+      "conditions": "@HorarioConsulta",
+      "event_name": "input",
+      "dialog_node": "handler_8_1699035382099"
+    },
+    {
+      "type": "event_handler",
+      "output": {},
+      "parent": "slot_7_1699035852274",
+      "context": {
+        "NomePaciente": "@NomePaciente"
+      },
+      "conditions": "@NomePaciente",
+      "event_name": "input",
+      "dialog_node": "handler_8_1699035852274"
+    },
+    {
+      "type": "event_handler",
+      "title": "handler_8_1699035889586_copy",
+      "output": {},
+      "parent": "slot_7_1699035889585_copy",
+      "context": {
+        "Telefone": "@Telefone"
+      },
+      "conditions": "@Telefone",
+      "event_name": "input",
+      "dialog_node": "handler_8_1699035889586_copy"
+    },
+    {
+      "type": "event_handler",
+      "output": {},
+      "parent": "slot_10_1699038249982",
+      "context": {
+        "NomePaciente": "@NomePaciente"
+      },
+      "conditions": "@NomePaciente",
+      "event_name": "input",
+      "dialog_node": "handler_8_1699038249983"
+    },
+    {
+      "type": "event_handler",
+      "output": {},
+      "parent": "slot_6_1699050614607",
+      "context": {
+        "DataConsulta": "@DataConsulta"
+      },
+      "conditions": "@DataConsulta",
+      "event_name": "input",
+      "dialog_node": "handler_8_1699050614608"
+    },
+    {
+      "type": "event_handler",
+      "output": {},
+      "parent": "slot_8_1699052102157",
+      "context": {
+        "Especialidade": "@Especialidade"
+      },
+      "conditions": "@Especialidade",
+      "event_name": "input",
+      "dialog_node": "handler_8_1699052102167"
+    },
+    {
+      "type": "event_handler",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Obrigado, $NomePaciente. Vou verificar os horários disponíveis para consulta com um pediatra na próxima semana. Aguarde um momento, por favor."
+              },
+              {
+                "text": "Encontrei algumas opções de horários disponíveis para a próxima semana com pediatras. Aqui estão os horários:\n\nTerça-feira, 10 de novembro, às 10:00 da manhã.\nQuarta-feira, 11 de novembro, às 15:30 da tarde.\nSexta-feira, 13 de novembro, às 9:00 da manhã.\n\nPor favor, escolha um dos horários acima"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "slot_10_1699052923249",
+      "event_name": "focus",
+      "dialog_node": "handler_8_1699052923249",
+      "previous_sibling": "handler_1_1699052923249"
+    },
+    {
+      "type": "event_handler",
+      "output": {},
+      "parent": "slot_10_1699054158412",
+      "context": {
+        "Email": "@Email"
+      },
+      "conditions": "@Email",
+      "event_name": "input",
+      "dialog_node": "handler_8_1699054158413"
+    },
+    {
+      "type": "event_handler",
+      "output": {},
+      "parent": "slot_3_1699035316805",
+      "context": {
+        "DataConsulta": "@DataConsulta"
+      },
+      "conditions": "@DataConsulta",
+      "event_name": "input",
+      "dialog_node": "handler_9_1699035316805"
+    },
+    {
+      "type": "event_handler",
+      "title": "handler_9_1699035889586_copy",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": " Obrigado,$NomePaciente. Para confirmar a reserva, preciso do seu número de telefone para entrarmos em contato, caso seja necessário."
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "slot_7_1699035889585_copy",
+      "event_name": "focus",
+      "dialog_node": "handler_9_1699035889586_copy",
+      "previous_sibling": "handler_8_1699035889586_copy"
+    },
+    {
+      "type": "event_handler",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Entendo, vou ajudá-lo com o cancelamento. Para prosseguir, por favor, informe seu nome e o nome do médico com quem a consulta foi agendada."
+              }
+            ],
+            "response_type": "text"
+          }
+        ]
+      },
+      "parent": "slot_10_1699038249982",
+      "event_name": "focus",
+      "dialog_node": "handler_9_1699038249983",
+      "previous_sibling": "handler_8_1699038249983"
+    },
+    {
+      "type": "event_handler",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Qual Nome do Médico ?"
+              }
+            ],
+            "response_type": "text"
+          }
+        ]
+      },
+      "parent": "slot_4_1699050516731",
+      "event_name": "focus",
+      "dialog_node": "handler_9_1699050516732",
+      "previous_sibling": "handler_7_1699050516732"
+    },
+    {
+      "type": "event_handler",
+      "output": {},
+      "parent": "slot_5_1699051240362",
+      "context": {
+        "Especialidade": "@Especialidade"
+      },
+      "conditions": "@Especialidade",
+      "event_name": "input",
+      "dialog_node": "handler_9_1699051240371"
+    },
+    {
+      "type": "event_handler",
+      "output": {},
+      "parent": "slot_6_1699051772563",
+      "context": {
+        "Especialidade_Otorrinolaringologista": "@Especialidade:Otorrinolaringologista"
+      },
+      "conditions": "@Especialidade:Otorrinolaringologista",
+      "event_name": "input",
+      "dialog_node": "handler_9_1699051772564"
+    },
+    {
+      "type": "event_handler",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": " Perfeito! Por favor, informe-me o seu nome para que eu possa verificar a disponibilidade para você."
+              }
+            ],
+            "response_type": "text"
+          }
+        ]
+      },
+      "parent": "slot_2_1699052868601",
+      "event_name": "focus",
+      "dialog_node": "handler_9_1699052868602",
+      "previous_sibling": "handler_6_1699052868602"
+    },
+    {
+      "type": "event_handler",
+      "output": {},
+      "parent": "slot_1_1699053161326",
+      "context": {
+        "Email": "@Email"
+      },
+      "conditions": "@Email",
+      "event_name": "input",
+      "dialog_node": "handler_9_1699053161327"
+    },
+    {
+      "type": "frame",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Obrigado, $NomePaciente. Seu e-mail é: $Email. Seu agendamento foi confirmado, e você receberá um lembrete no seu e-mail antes da consulta. Se você tiver mais alguma pergunta ou precisar de assistência adicional, fique à vontade para perguntar."
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "conditions": "#VerificarDisponibilidade",
+      "dialog_node": "node_10_1699051986261",
+      "previous_sibling": "node_8_1699051136819"
+    },
+    {
+      "type": "frame",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Obrigado, $NomeMedico. O cancelamento da sua consulta foi concluído com sucesso. Se você precisar de assistência adicional ou desejar remarcar a consulta, não hesite em nos contatar. Desejamos a você melhoras."
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "conditions": "#CancelarConsulta",
+      "dialog_node": "node_3_1699037995792",
+      "previous_sibling": "Em outros casos"
+    },
+    {
+      "type": "frame",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Obrigado, $NomePaciente. Seu reagendamento para a $DataConsulta, às $HorarioConsulta, com o $NomeMedico, foi concluído com sucesso. Enviaremos uma confirmação por SMS para o número de telefone fornecido. Se você tiver mais alguma pergunta ou precisar de assistência adicional, fique à vontade para perguntar.\n\n\n\n\n\n"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "conditions": "#ReagendarConsulta",
+      "dialog_node": "node_4_1699038736539",
+      "previous_sibling": "node_3_1699037995792"
+    },
+    {
+      "type": "frame",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Agradecemos por utilizar nosso serviço de informações sobre especialidades médicas. Estamos aqui para ajudar a esclarecer todas as suas dúvidas. Se você precisar de mais informações ou tiver outras perguntas, não hesite em entrar em contato. Tenha um ótimo dia!"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "conditions": "#PerguntarSobreEspecialidade",
+      "dialog_node": "node_8_1699051136819",
+      "previous_sibling": "node_4_1699038736539"
+    },
+    {
+      "type": "slot",
+      "parent": "node_3_1699037995792",
+      "variable": "$NomePaciente",
+      "dialog_node": "slot_10_1699038249982"
+    },
+    {
+      "type": "slot",
+      "output": {},
+      "parent": "node_10_1699051986261",
+      "variable": "$HorarioConsulta",
+      "dialog_node": "slot_10_1699052923249",
+      "previous_sibling": "slot_2_1699052868601"
+    },
+    {
+      "type": "slot",
+      "output": {},
+      "parent": "node_10_1699051986261",
+      "variable": "$Email",
+      "dialog_node": "slot_10_1699054158412",
+      "previous_sibling": "slot_1_1699053161326"
+    },
+    {
+      "type": "slot",
+      "output": {},
+      "parent": "node_10_1699051986261",
+      "variable": "$Email",
+      "dialog_node": "slot_1_1699053161326",
+      "previous_sibling": "slot_10_1699052923249"
+    },
+    {
+      "type": "slot",
+      "parent": "Em outros casos",
+      "variable": "$Especialidade",
+      "dialog_node": "slot_2_1699035261242"
+    },
+    {
+      "type": "slot",
+      "parent": "node_3_1699037995792",
+      "variable": "$NomeMedico",
+      "dialog_node": "slot_2_1699038311043",
+      "previous_sibling": "slot_10_1699038249982"
+    },
+    {
+      "type": "slot",
+      "parent": "node_4_1699038736539",
+      "variable": "$NomePaciente",
+      "dialog_node": "slot_2_1699050461958"
+    },
+    {
+      "type": "slot",
+      "parent": "node_10_1699051986261",
+      "variable": "$DataConsulta",
+      "dialog_node": "slot_2_1699052252458",
+      "previous_sibling": "slot_8_1699052102157"
+    },
+    {
+      "type": "slot",
+      "parent": "node_10_1699051986261",
+      "variable": "$NomePaciente",
+      "dialog_node": "slot_2_1699052868601",
+      "previous_sibling": "slot_2_1699052252458"
+    },
+    {
+      "type": "slot",
+      "output": {},
+      "parent": "Em outros casos",
+      "variable": "$DataConsulta",
+      "dialog_node": "slot_3_1699035316805",
+      "previous_sibling": "slot_5_1699038116911"
+    },
+    {
+      "type": "slot",
+      "output": {},
+      "parent": "Em outros casos",
+      "variable": "$NomeMedico",
+      "dialog_node": "slot_3_1699037291053",
+      "previous_sibling": "slot_2_1699035261242"
+    },
+    {
+      "type": "slot",
+      "output": {},
+      "parent": "node_3_1699037995792",
+      "variable": "$Telefone",
+      "dialog_node": "slot_3_1699038504416",
+      "previous_sibling": "slot_4_1699038425729"
+    },
+    {
+      "type": "slot",
+      "parent": "node_8_1699051136819",
+      "variable": "$Especialidade_Pediatra",
+      "dialog_node": "slot_3_1699051806573",
+      "previous_sibling": "slot_6_1699051772563"
+    },
+    {
+      "type": "slot",
+      "parent": "Em outros casos",
+      "variable": "$HorarioConsulta",
+      "dialog_node": "slot_4_1699035382099",
+      "previous_sibling": "slot_3_1699035316805"
+    },
+    {
+      "type": "slot",
+      "parent": "node_3_1699037995792",
+      "variable": "$HorarioConsulta",
+      "dialog_node": "slot_4_1699038425729",
+      "previous_sibling": "slot_6_1699038373944"
+    },
+    {
+      "type": "slot",
+      "parent": "node_4_1699038736539",
+      "variable": "$NomeMedico",
+      "dialog_node": "slot_4_1699050516731",
+      "previous_sibling": "slot_2_1699050461958"
+    },
+    {
+      "type": "slot",
+      "parent": "Em outros casos",
+      "variable": "$MotivoConsulta",
+      "dialog_node": "slot_5_1699038116911",
+      "previous_sibling": "slot_3_1699037291053"
+    },
+    {
+      "type": "slot",
+      "parent": "node_8_1699051136819",
+      "variable": "$Especialidade",
+      "dialog_node": "slot_5_1699051240362"
+    },
+    {
+      "type": "slot",
+      "parent": "node_8_1699051136819",
+      "variable": "$Especialidade_Neurologista",
+      "dialog_node": "slot_5_1699051749539",
+      "previous_sibling": "slot_9_1699051706696"
+    },
+    {
+      "type": "slot",
+      "output": {},
+      "parent": "node_3_1699037995792",
+      "variable": "$DataConsulta",
+      "dialog_node": "slot_6_1699038373944",
+      "previous_sibling": "slot_2_1699038311043"
+    },
+    {
+      "type": "slot",
+      "output": {},
+      "parent": "node_4_1699038736539",
+      "variable": "$DataConsulta",
+      "dialog_node": "slot_6_1699050614607",
+      "previous_sibling": "slot_4_1699050516731"
+    },
+    {
+      "type": "slot",
+      "parent": "node_4_1699038736539",
+      "variable": "$HorarioConsulta",
+      "dialog_node": "slot_6_1699050653061",
+      "previous_sibling": "slot_6_1699050614607"
+    },
+    {
+      "type": "slot",
+      "parent": "node_8_1699051136819",
+      "variable": "$Especialidade_Otorrinolaringologista",
+      "dialog_node": "slot_6_1699051772563",
+      "previous_sibling": "slot_5_1699051749539"
+    },
+    {
+      "type": "slot",
+      "parent": "Em outros casos",
+      "variable": "$NomePaciente",
+      "dialog_node": "slot_7_1699035852274",
+      "previous_sibling": "slot_4_1699035382099"
+    },
+    {
+      "type": "slot",
+      "title": "slot_7_1699035889585_copy",
+      "output": {},
+      "parent": "Em outros casos",
+      "variable": "$Telefone",
+      "dialog_node": "slot_7_1699035889585_copy",
+      "previous_sibling": "slot_7_1699035852274"
+    },
+    {
+      "type": "slot",
+      "parent": "node_10_1699051986261",
+      "variable": "$Especialidade",
+      "dialog_node": "slot_8_1699052102157"
+    },
+    {
+      "type": "slot",
+      "parent": "node_8_1699051136819",
+      "variable": "$Especialidade_Ginecologista",
+      "dialog_node": "slot_9_1699051706696",
+      "previous_sibling": "slot_5_1699051240362"
+    },
+    {
+      "type": "slot",
+      "parent": "node_8_1699051136819",
+      "variable": "$Especialidade_2",
+      "dialog_node": "slot_9_1699051848047",
+      "previous_sibling": "slot_3_1699051806573"
+    }
+  ],
+  "counterexamples": [],
+  "system_settings": {
+    "generative_ai": {
+      "slot_filling": {
+        "enabled": false
+      }
+    },
+    "disambiguation": {
+      "prompt": "Você quis dizer:",
+      "enabled": true,
+      "randomize": true,
+      "max_suggestions": 5,
+      "suggestion_text_policy": "title",
+      "none_of_the_above_prompt": "Nenhuma das anteriores",
+      "use_connect_to_support_prompt": "Connect to support",
+      "single_answer_clarification_prompt": "Something else"
+    },
+    "human_agent_assist": {
+      "prompt": "Você quis dizer:"
+    }
+  },
+  "learning_opt_out": false,
+  "language": "pt-br",
+  "description": "Serve para ajudar o cliente agendar consulta",
+  "name": "Assistente Consulta Médica-dialog"
+}
